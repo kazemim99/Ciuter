@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  quiterdb:
+    image: postgres
+
+  quiter.api:
+    image: ${DOCKER_REGISTRY-}quiterapi
+    build:
+      context: .
+      dockerfile: Quiter.Api/Dockerfile
